@@ -12,3 +12,6 @@ cart:
 checkout:
     path: /checkout
     controller: App\Controller\CheckoutController::index
+addToCart:
+    path: /cart/add/{id}
+    controller: App\Controller\StoreController::addToCart

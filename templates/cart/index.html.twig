@@ -1,3 +1,17 @@
 <h1>This will be the shopping cart</h1>
 <a href="{{ path('store-index') }}">Back to Store</a>
 <a href="{{ path('checkout') }}">Checkout</a>
+{% block body %}
+	<h1>Your Shopping Cart</h1>
+	{% if cart is empty %}
+		<p>Your cart is empty</p>
+	{% else %}
+		<ul>
+			<li>{{ cart.title }}
+				-
+				{{ cart.price }}</li>
+			<!-- Add any other relevant product information -->
+		</ul>
+	{% endif %}
+	<a href="{{ path('store-index') }}">Continue shopping</a>
+{% endblock %}
