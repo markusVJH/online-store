@@ -9,11 +9,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class StoreController extends AbstractController
 {
     #[Route('/store', name: 'app_store')]
-    public function index(): JsonResponse
+    public function index()
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/StoreController.php',
-        ]);
+        return $this->render('index.html.twig');
     }
 }
