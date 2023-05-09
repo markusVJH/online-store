@@ -3,6 +3,9 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
-index:
+store-index:
     path: /
     controller: App\Controller\StoreController::index
+cart:
+    path: /cart
+    controller: App\Controller\CartController::index

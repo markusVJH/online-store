@@ -11,6 +11,10 @@ class StoreController extends AbstractController
     #[Route('/store', name: 'app_store')]
     public function index()
     {
-        return $this->render('index.html.twig');
+        return $this->render('store/index.html.twig');
+    }
+    public function cart()
+    {
+    return $this->render('store/cart.html.twig');
     }
 }
