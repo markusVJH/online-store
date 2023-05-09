@@ -1,2 +1,17 @@
-<h1>Welcome to the Store!</h1>
-<a href="{{ path('cart') }}">Shopping Cart</a>
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome to the Store
+{% endblock %}
+
+{% block body %}
+	<h1>Welcome to the Store!</h1>
+	<ul>
+		{% for product in products %}
+			<li>{{ product.title }}
+				-
+				{{ product.price }}
+				€</li>
+		{% endfor %}
+	</ul>
+	<a href="{{ path('cart') }}">Shopping Cart</a>
+{% endblock %}
