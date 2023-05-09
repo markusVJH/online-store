@@ -13,8 +13,4 @@ class StoreController extends AbstractController
     {
         return $this->render('store/index.html.twig');
     }
-    public function cart()
-    {
-    return $this->render('store/cart.html.twig');
-    }
 }

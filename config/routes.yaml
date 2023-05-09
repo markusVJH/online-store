@@ -9,3 +9,6 @@ store-index:
 cart:
     path: /cart
     controller: App\Controller\CartController::index
+checkout:
+    path: /checkout
+    controller: App\Controller\CheckoutController::index
