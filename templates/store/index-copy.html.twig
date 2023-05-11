@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome to the Store
+{% endblock %}
+
+{% block body %}
+	<h1>Welcome to the Store!</h1>
+	<ul>
+		<div class="album py-5 bg-body-tertiary">
+			<div class="container">
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">		
+					{% for product in products %}
+					<div class="col">
+						<div class="card shadow-sm mt-1">
+							<div class="d-flex justify-content-center align-items-center p-3">
+								<img src="{{product.image}}" width="150" alt="">
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{product.title}}</p>
+								<p class="card-text fw-light" >{{product.description|u.truncate(100, '...')}}</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">Add to card</button>
+									</div>
+									<small class="text-body-secondary">Price: {{ product.price }}$</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</ul>
+	<a href="{{ path('cart') }}">Shopping Cart</a>
+	<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

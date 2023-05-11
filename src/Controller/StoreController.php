@@ -16,7 +16,7 @@ class StoreController extends AbstractController
         $response = $client->request('GET', 'https://fakestoreapi.com/products?limit=10');
         if ($response->getStatusCode() == Response::HTTP_OK) {
             $products = $response->toArray();
-            return $this->render('store/index.html.twig', [
+            return $this->render('store/index-copy.html.twig', [
                 'products' => $products
             ]);
         }
