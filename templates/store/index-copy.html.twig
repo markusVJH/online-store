@@ -6,40 +6,36 @@
 {% block body %}
 		<div class="album py-5 bg-body-tertiary">
 			<div class="container">
-				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">		
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 					{% for product in products %}
-					<div class="col">
-						<div class="card shadow-sm mt-1">
-							<div class="d-flex justify-content-center align-items-center p-3">
-								<img src="{{product.image}}" width="150" alt="">
-							</div>
-							<div class="card-body">
-								<p class="card-text">{{product.title}}</p>
-								<p class="card-text fw-light" >{{product.description|u.truncate(100, '...')}}</p>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group" {{ stimulus_controller('add-to-cart', {
-										infoUrl: {title: product.title, price: product.price}
-									}) }}>
-										<button type="button" {{ stimulus_action('add-to-cart', 'add') }} class="btn btn-sm btn-outline-secondary">Add to card</button>
+						<div class="col">
+							<div class="card shadow-sm mt-1">
+								<div class="d-flex justify-content-center align-items-center p-3">
+									<img src="{{product.image}}" width="150" alt="">
+								</div>
+								<div class="card-body">
+									<p class="card-text">{{product.title}}</p>
+									<p class="card-text fw-light">{{product.description|u.truncate(100, '...')}}</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="btn-group" {{ stimulus_controller('add-to-cart', { infoUrl: {title: product.title, price: product.price} }) }}>
+											<button type="button" {{ stimulus_action('add-to-cart', 'add') }} class="btn btn-sm btn-outline-secondary">Add to cart</button>
+										</div>
+										<small class="text-body-secondary">Price:
+											{{ product.price }}$</small>
 									</div>
-									<small class="text-body-secondary">Price: {{ product.price }}$</small>
 								</div>
 							</div>
 						</div>
-					</div>
 					{% endfor %}
 				</div>
 			</div>
 		</div>
 	</ul>
-	<a href="{{ path('cart') }}">Shopping Cart</a>
+	<a href="{{ path('cart') }}" class="btn btn-warning btn-block btn-lg">Shopping Cart</a>
 	<div class="album py-5 bg-body-tertiary">
-    <div class="container">
+		<div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        
-        </div>
-      </div>
-    </div>
-  </div>
-{% endblock %}
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"></div>
+		</div>
+	</div>
+</div>{% endblock %}
