@@ -12,7 +12,7 @@ class CheckoutController extends AbstractController
     public function index(): Response
     {
         return $this->render('checkout/index.html.twig', [
-            'controller_name' => 'CheckoutController',
+            'page' => 'app_checkout'
         ]);
     }
 }

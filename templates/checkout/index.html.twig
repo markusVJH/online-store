@@ -1,19 +1,8 @@
 {% extends 'base.html.twig' %}
+{% block title %}Checkout form
+{% endblock %}
 {% block body %}
-	<h1>Checkout</h1>
-	<a href="{{ path('store-index') }}">Continue shopping</a>
-	<a href="{{ path('cart') }}">Back to Cart</a>
-	<!DOCTYPE html>
-	<html>
-		<head>
-			<title>Checkout Form</title>
-			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-			<link rel="stylesheet" href="style.css">
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		</head>
-
-		<body>
 			<div class="col-md-4 container bg-default">
 
 				<h4 class="my-4">
@@ -159,7 +148,7 @@
 					</div>
 
 					<div class="form-row">
-						<div class="col-md-5 form-group">
+						<div class="col-md-6 form-group">
 							<label for="expiration">Expire Date</label>
 							<input type="text" class="form-control" id="card-name" placeholder required>
 							<div class="invalid-feedback">
@@ -168,7 +157,7 @@
 						</div>
 
 
-						<div class="col-md-5 form-group">
+						<div class="col-md-6 form-group">
 							<label for="ccv-no">Security Number</label>
 							<input type="text" class="form-control" id="sec-no" placeholder required>
 							<div class="invalid-feedback">
@@ -179,7 +168,7 @@
 
 					<hr class="mb-4">
 
-					<button class="btn btn-primary bt-lg btn-block" type="submit">Continue to Checkout</button>
+					<button class="btn btn-primary bt-lg btn-block mb-4" type="submit">Continue to Checkout</button>
 				</form>
 			</div>
 		</body>
