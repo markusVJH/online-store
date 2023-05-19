@@ -16,10 +16,12 @@ class StoreController extends AbstractController
         $response = $client->request('GET', 'https://fakestoreapi.com/products?limit=30');
         if ($response->getStatusCode() == Response::HTTP_OK) {
             $products = $response->toArray();
-            return $this->render('store/index-copy.html.twig', [
-                'products' => $products,
-                'page' => 'app_store'
-            ]);
+        } else {
+            $products = [];
         }
+        return $this->render('store/index.html.twig', [
+            'products' => $products,
+            'page' => 'app_store'
+        ]);
     }
 }

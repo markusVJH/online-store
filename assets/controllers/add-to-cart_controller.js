@@ -18,10 +18,14 @@ export default class extends Controller {
             }
         }
     }
+
     redirect() {
+        let cartUrl = '/cart'
         const cartData = JSON.parse(localStorage.getItem('cart'))
-        const ids = cartData.map(item => item.id) 
-        const cartUrl = `/cart?data=${ids.join(',')}`
-        window.location.href = cartUrl;
+        if (cartData && cartData.length > 0) {
+          const ids = cartData.map(item => item.id)
+          cartUrl = `/cart?data=${ids.join(',')}`
+        }
+        window.location.href = cartUrl
       }
 }
