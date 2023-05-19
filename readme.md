@@ -1,6 +1,6 @@
 # Fake Online Store
 
-This is a simple Symfony application that shows us the products from the [Fake Store API](https://fakestoreapi.com) and allows us to add products to the shopping cart.
+This is a simple Symfony application that shows us the products from the [Fake Store API](https://fakestoreapi.com) and allows us to add products to the shopping cart and view them on the shopping cart page.
 
 ## Technologies used
 - Symfony 6.2, including
@@ -23,9 +23,6 @@ npm run watch
 symfony serve -d
 ```
 The fake online store will be served at [http://localhost:8000](http://localhost:8000).
-
-## How to use it
-You can add products to the shopping cart and view them on the shopping cart page.
 
 ## Credits
 
