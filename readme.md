@@ -33,7 +33,7 @@ You can add products to the shopping cart and view them on the shopping cart pag
 
 ## Screenshot
 
-![desktop screenshot](https://github.com/Kapshtak/online-store/blob/main/screenshots/desktop.png)
+![desktop screenshot](https://github.com/markusVJH/online-store/blob/main/screenshots/desktop.png)
 
 ## Authors
 
